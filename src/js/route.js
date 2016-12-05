@@ -108,7 +108,7 @@ var route = {
 
         window.history.pushState({},"",target.getAttribute('data-url')); // Change URL.
         var time = target.dataset.time || 0;
-        this.loadPage("/thehiker/"+target.href).then(function(responseText) {
+        this.loadPage(BASE_URL+target.dataset.href).then(function(responseText) {
             var wrapper = document.createElement('div');
                 wrapper.innerHTML = responseText;
 
