@@ -4,7 +4,8 @@ var about     = require('./about.js');
 var fugues    = require('./fugues.js');
 var sound     = require('./sound.js');
 
-var BASE_URL = "http://localhost:8080";
+// var BASE_URL = "http://localhost:8080";
+var BASE_URL = "http://www.matthieubessol.com/thehiker/";
 
 var route = {
     elmts: {},
@@ -107,7 +108,7 @@ var route = {
 
         window.history.pushState({},"",target.getAttribute('data-url')); // Change URL.
         var time = target.dataset.time || 0;
-        this.loadPage(target.href).then(function(responseText) {
+        this.loadPage("/thehiker/"+target.href).then(function(responseText) {
             var wrapper = document.createElement('div');
                 wrapper.innerHTML = responseText;
 
@@ -155,8 +156,6 @@ var route = {
         script.onload = function () {
             //console.log("load js");
         };
-
-        console.log(document.getElementById('app'));
         document.getElementById('app').appendChild(script);
     },
 
