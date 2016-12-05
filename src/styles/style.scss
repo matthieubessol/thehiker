@@ -1,0 +1,373 @@
+@import url('https://fonts.googleapis.com/css?family=Cormorant|Montserrat');
+@import "layout/mediaqueries";
+@import "layout/grid";
+@import "layout/fonts";
+@import "components/menu";
+@import "components/main_article";
+@import "components/footer";
+@import "components/about";
+@import "components/fugues";
+
+@charset "UTF-8";
+
+body {
+    padding:0;margin:0;margin: 0 auto;
+    overflow-x:hidden;
+}
+
+    .content {
+        min-height: 100vh;
+        max-width:1200px;
+        margin: 0 auto;
+        z-index: 8000000000000;
+        position: relative;
+        background:white;
+
+        &--full {
+            // max-width: 100%;
+
+            .row {
+                max-width: 1200px;
+                margin:0 auto;
+                width:100%;
+            }
+        }
+
+        &:after {
+            content: "";
+            display: block;
+            width: 2000px;
+            background: white;
+            position: absolute;
+            top: 0;
+            right: -2000px;
+            height: 100%;
+        }
+
+        &:before {
+            content: "";
+            display: block;
+            width: 2000px;
+            background: white;
+            position: absolute;
+            top: 0;
+            left: -2000px;
+            height: 100%;
+        }
+    }
+
+.loader {
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height: 100%;
+    overflow: hidden;
+    background:white;
+
+    &__background {
+        display:block;
+        position:absolute;
+        height:100%;
+        width: 100%;
+        left: 50%;
+        top:50%;
+        transform: translateX(-50%) translateY(-50%);
+    }
+
+    &__title {
+        position:absolute;
+        top:50%;
+        left: 50%;
+        transform: translateX(-50%) translateY(calc(-50% + 50px));
+        color:white;
+        font-size: 144px;
+        font-family: 'Cormorant', serif;
+        letter-spacing: 10px;
+        opacity: 0;
+        animation: fadeIn 0.8s forwards ease-out;
+        animation-delay:0.5s;
+    }
+}
+
+#app {position:relative; z-index: 1000;}
+
+.foot {
+    position:absolute;
+    left:50%;
+    z-index: 10;
+    top:calc(50% + 200px);
+    transform: translateX(-50%) translateY(calc(-50%));
+    animation: fadeIn 0.8s forwards ease-out;
+    animation-delay:0.5s;
+
+    &__left {
+        opacity: 0;
+        width:20px;
+        animation: footLeft 5s infinite;
+        -webkit-filter: invert(100%);
+    }
+
+    &__right {
+        opacity: 0;
+        width:20px;
+        animation: footRight 5s infinite;
+        animation-delay:0.8s;
+        -webkit-filter: invert(100%);
+    }
+}
+
+.content {
+    z-index: 100;
+    background:white;
+    z-index: 10000000000;
+    transform: translateY(100vh);
+
+    &.active {
+        transition:1.5s;
+        transition-timing-function:ease-in-out;
+        transform:translateY(0vh);
+    }
+}
+
+h1 {
+    color:black;
+    margin:0;
+    padding:20px;
+}
+
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateX(-50%) translateY(calc(-50% + 50px));
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(-50%) translateY(-50%);
+    }
+}
+
+@keyframes footLeft {
+    0% {opacity:0; transform:translateY(0px)}
+    5% {opacity:1; transform:translateY(0px)}
+    15%{opacity:1; transform:translateY(0px)}
+    20%{opacity:0; transform:translateY(0px)}
+    30%{opacity:0; transform:translateY(-100px)}
+    35%{opacity:1; transform:translateY(-100px)}
+    45%{opacity:1; transform:translateY(-100px)}
+    50%{opacity:0; transform:translateY(-100px)}
+    60%{opacity:0; transform:translateY(-50px)}
+    65%{opacity:1; transform:translateY(-50px)}
+    75%{opacity:1; transform:translateY(-50px)}
+    80%{opacity:0; transform:translateY(-50px)}
+}
+
+@keyframes footRight {
+    0% {opacity:0; transform:translateY(-50px)}
+    5% {opacity:1; transform:translateY(-50px)}
+    15%{opacity:1; transform:translateY(-50px)}
+    20%{opacity:0; transform:translateY(-50px)}
+    30%{opacity:0; transform:translateY(0px)}
+    35%{opacity:1; transform:translateY(0px)}
+    45%{opacity:1; transform:translateY(0px)}
+    50%{opacity:0; transform:translateY(0px)}
+    60%{opacity:0; transform:translateY(-100px)}
+    65%{opacity:1; transform:translateY(-100px)}
+    75%{opacity:1; transform:translateY(-100px)}
+    80%{opacity:0; transform:translateY(-100px)}
+}
+
+header {
+    margin:0;
+}
+
+.home {
+    // background:white;
+}
+
+
+#app .cc {
+    transition:0.5s;
+    opacity: 1;
+    transform: translateY(0px);
+}
+
+#app.no-background .cc {
+    transform: initial !important;
+}
+
+#app.fadeOut .cc {
+    transition:0.5s;
+    opacity: 0;
+    transform: translateY(100px);
+
+    &:before {
+
+    }
+}
+
+#app.fadeOut {
+}
+
+
+.placeholder {
+  background-color: #f6f6f6;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 10px;
+  background:white;
+
+  .img-small.loaded {
+    // display: none;
+  }
+}
+
+.placeholder img {
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  left: 0;
+  width: 100%;
+  transition: opacity 1s linear;
+}
+
+.placeholder img.loaded {
+  opacity: 1;
+}
+
+.img-small {
+  filter: blur(50px);
+  /* this is needed so Safari keeps sharp edges */
+  transform: scale(1);
+}
+
+// .js-block {
+//     transition:0s;
+//     will-change: transform;
+//     transform: translate3d(0,0,0);
+// }
+//
+// .block-1 {
+//     z-index: 1;
+// }
+
+
+.block-2 {
+    z-index: 2;
+}
+
+.block-3 {
+    z-index: 3;
+}
+
+.block-4 {
+    z-index: 4;
+}
+
+.block-5 {
+    z-index: 5;
+}
+
+.block-6 {
+    z-index: 6;
+}
+
+.block-7 {
+    z-index: 7;
+}
+
+.block-8 {
+    z-index: 8;
+}
+
+.block-9 {
+    z-index: 9;
+}
+
+.block-10 {
+    z-index: 10;
+}
+
+.block-11 {
+    z-index: 11;
+}
+
+
+.js-block {
+    // position:absolute !important;
+    // top:0;
+
+}
+
+
+.grid .grid-item-type:first-child.fifty-thirty {
+    .grid-item:last-child {
+        margin-top: 0%;
+    }
+}
+
+.no-background {
+    // background: none;
+    // max-width: none;
+    // min-height: auto;
+    padding: 0 !important;
+    transform: none !important;
+}
+
+@import "components/shop";
+
+.cc {
+    padding: 0 10px;
+}
+
+
+.home {
+    .main-article {
+        .main-article__image-container {
+            @include mobile {
+                width: calc(100% + 20px);
+                margin-left: -10px;
+            }
+        }
+    }
+}
+
+
+.small-loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background:white;
+    pointer-events: none;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition:1s;
+    height: 100vh;
+    z-index: 1100;
+
+    &.active {
+        // display: block;
+        opacity: 1;
+    }
+
+    &__icon {
+        width: 140px;
+        height: 87px;
+        background-image:url('/assets/images/svg/mountain.svg');
+        position: absolute;
+        left: 50%;
+        top: 55%;
+        transform: translate(-50%,-50%);
+    }
+
+    &__background {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+    }
+}
