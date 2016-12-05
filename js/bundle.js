@@ -1608,7 +1608,7 @@
 
 	    bindUi: function() {
 	        this.sound.rain = new Howl({
-	            src: ['/assets/sounds/rain.mp3'],
+	            src: ['http://www.matthieubessol.com/thehiker/assets/sounds/rain.mp3'],
 	            autoplay: false,
 	            loop: true,
 	            volume: 0.5,
@@ -1616,7 +1616,7 @@
 	        });
 
 	        this.sound.fire = new Howl({
-	            src: ['/assets/sounds/fire.mp3'],
+	            src: ['http://www.matthieubessol.com/thehiker/assets/sounds/fire.mp3'],
 	            autoplay: false,
 	            loop: true,
 	            volume: 1,
@@ -1624,7 +1624,7 @@
 	        });
 
 	        this.sound.storm = new Howl({
-	            src: ['/assets/sounds/storm.mp3'],
+	            src: ['http://www.matthieubessol.com/thehiker/assets/sounds/storm.mp3'],
 	            autoplay: false,
 	            loop: true,
 	            volume: 1,
