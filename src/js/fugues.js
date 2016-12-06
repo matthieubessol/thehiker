@@ -47,8 +47,10 @@ var fugues = {
             var previousHeight = document.getElementsByClassName('fugues__header')[0].offsetHeight,
                 value = window.innerWidth / document.getElementsByClassName('placeholder')[0].offsetWidth;
             this.toScale = value;
-            document.getElementsByClassName('fugues__header')[0].classList.add("active");
-            document.getElementsByClassName('fugues__header')[0].style.transform = "scale("+value+")";
+            setTimeout(function() {
+                document.getElementsByClassName('fugues__header')[0].classList.add("active");
+                document.getElementsByClassName('fugues__header')[0].style.transform = "scale("+value+")";
+            },1000);
 
             setTimeout(function() {
                 var newHeight = previousHeight*value;
@@ -56,7 +58,7 @@ var fugues = {
                 value = previousHeight*value - previousHeight;
                 document.getElementsByClassName('fugues__wrapper')[0].style.transform = "translate3d(0,"+ (value/2 - 0.2*previousHeight) +"px,0)";
                 document.getElementsByClassName('fugues__wrapper')[0].style.marginBottom = value +"px";
-            },0);
+            },1010);
         } else if(this.elmts.fuguesPage) {
             var previousHeight = this.elmts.fuguesPage.offsetHeight,
                 value = window.innerWidth / document.getElementsByClassName('placeholder')[0].offsetWidth;

@@ -17,8 +17,17 @@
     }
 
     &__wrapper {
-        height: 100vh;
+        height: calc(100vh - 170px);
         position:relative;
+    }
+
+    &__svg {
+        position: absolute;
+        height: 160px;
+        left: 50%;
+        z-index: 10;
+        top: 50%;
+        transform: translate(-50%, -30%);
     }
 
     &__list {
@@ -86,15 +95,15 @@
     .mountain {
         width: 30%;
         left: 10%;
-        top: 10%;
+        bottom: 5%;
 
         .fugues__text {
-            bottom: 30px;
+            top: 30px;
             right: 40px;
         }
 
         &:hover:after {
-            transform:translate(calc(-50% + 40px),calc(-50% + 40px));
+            transform:translate(calc(-50% + 40px),calc(-50% - 40px));
         }
     }
 
@@ -118,6 +127,36 @@
 
         &:hover:after {
             transform:translate(calc(-50% - 40px),calc(-50% + 40px));
+        }
+    }
+
+    .eau {
+        width: 30%;
+        left: 10%;
+        bottom: 20%;
+
+        .fugues__text {
+            bottom: 30px;
+            right: 40px;
+        }
+
+        &:hover:after {
+            transform:translate(calc(-50% + 40px),calc(-50% + 40px));
+        }
+    }
+
+    .forets {
+        right: 10%;
+        width: 20%;
+        bottom: 3%;
+
+        .fugues__text {
+            bottom: 20px;
+            left: 20px;
+        }
+
+        &:hover:after {
+            transform:translate(calc(-50% + 40px),calc(-50% + 40px));
         }
     }
 
@@ -147,10 +186,50 @@
             width: 100%;
             height: 100%;
             position:absolute;
-            background:rgba(40,76,36,0.8);
+            background: rgba(87,189,225,.4);
             left: 0;
             top: 0;
             z-index: 1;
+        }
+
+        &--montagnes {
+            &:after {
+                background: rgba(87,189,225,.4);
+            }
+        }
+
+        &--forets {
+            &:after {
+                background: rgba(14, 110, 48, 0.38);
+            }
+
+            .fugues__svg {
+                position: absolute;
+                    height: auto;
+                    width: 80%;
+                    left: 50%;
+                    z-index: 10;
+                    top: 50%;
+                    transform: translate(-50%, -10%);
+                    bottom: 0;
+            }
+        }
+
+        &--eau {
+
+            .fugues__svg {
+                height: 190px;
+            }
+        }
+
+        &--deserts {
+            &:after {
+                background: rgba(255, 193, 7, 0.5);
+            }
+
+            .fugues__svg {
+                height: 180px;
+            }
         }
     }
 }

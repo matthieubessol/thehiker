@@ -4,8 +4,9 @@ var about     = require('./about.js');
 var fugues    = require('./fugues.js');
 var sound     = require('./sound.js');
 
-// var BASE_URL = "http://localhost:8080";
-var BASE_URL = "http://www.matthieubessol.com/thehiker/";
+// var BASE_URL = "http://localhost:8888/thehiker/";
+var BASE_URL = "http://localhost:8888/thehiker/";
+// var BASE_URL = "http://www.matthieubessol.com/thehiker/";
 
 var route = {
     elmts: {},
@@ -106,7 +107,7 @@ var route = {
             target = target.parentNode;
         }
 
-        window.history.pushState({},"",target.getAttribute('data-url')); // Change URL.
+        window.history.pushState({},"",'/thehiker/'+target.getAttribute('data-url')); // Change URL.
         var time = target.dataset.time || 0;
         this.loadPage(BASE_URL+target.dataset.href).then(function(responseText) {
             var wrapper = document.createElement('div');
