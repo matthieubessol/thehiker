@@ -1,4 +1,4 @@
-require("../styles/style.css");
+// require("../styles/style.css");
 require('whatwg-fetch');
 var route = require('./route.js');
 // var isotope = require('isotope-layout');

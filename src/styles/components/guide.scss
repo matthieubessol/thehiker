@@ -1,0 +1,66 @@
+.guide {
+
+    &__background {
+        position: relative;
+        padding-bottom: 90vh;
+        overflow: hidden;
+        width: 100%;
+
+        img {
+            position: absolute;
+            width: 100%;
+        }
+
+        @include mobile {
+            padding-bottom: 56%;
+        }
+    }
+
+    &__title {
+        @extend %Montserrat;
+        font-size: 40px;
+        margin-bottom: 30px;
+        margin-top: 20px;
+    }
+
+    &__background {
+        max-width:100%;
+    }
+
+    label {
+        font-size: 20px;
+        @extend %Cormorant;
+    }
+
+    input {
+        top: -3px;
+        position: relative;
+        margin-right: 15px;
+        margin-bottom: 10px;
+    }
+
+    &__intro {
+        @extend %Cormorant;
+        font-size: 20px;
+        line-height: 24px;
+        margin-bottom: 30px;
+    }
+
+    &__subtitle {
+        @extend %Montserrat;
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+
+    &__small-wrapper {
+        margin-bottom: 40px;
+    }
+
+    .flex-wrapper {
+        align-items: center;
+
+        @include mobile {
+            display: block;
+        }
+    }
+}

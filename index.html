@@ -5,19 +5,53 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <style type="text/css"></style>
     <link rel="stylesheet" type="text/css" href="https://necolas.github.io/normalize.css/latest/normalize.css">
+    <link rel="stylesheet" type="text/css" href="./src/styles/style.css">
     <title>Document</title>
 </head>
 <body>
     <!-- <div class="site-wrapper"> -->
         <div class="content">
-            <div class="menu row">
-                <a class="js-links menu__title" data-url="/" data-href="/home.html">The Hiker</a>
+            <div class="menu">
+                <a class="js-links menu__title" href="#" data-url="/" data-href="/home.html">The Hiker</a>
                 <header class="menu__container">
                     <!-- <a class="js-links" data-url="/" href="/index.html"  >Home</a> -->
-                    <a class="js-links menu__item" data-url="/fugues/" data-href="/fugues/index.html">Fugues</a>
-                    <a class="js-links menu__item" data-url="/fugues/" data-href="/fugues/index.html">Guide</a>
-                    <a class="js-links menu__item" data-url="/shop/" data-href="/shop/index.html"  >Shop</a>
-                    <a class="js-links menu__item" data-url="/about" data-href="/about.html" >À propos</a>
+                    <a class="js-links menu__item" href="#" data-url="/fugues/" data-href="/fugues/index.html">Fugues</a>
+                    <a class="js-links menu__item" href="#" data-url="/guide.html" data-href="/guide.html">Guide</a>
+                    <a class="js-links menu__item" href="#" data-url="/shop/" data-href="/shop/index.html"  >Shop</a>
+                    <a class="js-links menu__item" href="#" data-url="/about.html" data-href="/about.html" >À propos</a>
+
+                    <div class="menu__shop">
+                        <div class="bulle"><div class="bulle__content">2</div></div>
+                        <input class="menu__input" type="checkbox" id="checkboxmenu">
+                        <label for="checkboxmenu"><img src="/thehiker/assets/images/svg/shopping-cart.svg"></span></label>
+                        <div class="menu__shopping-cart">
+                            <div class="menu__shopping-cart__content">
+                                <div class="menu__shopping__item">
+                                    <div class="menu__shopping__section">Vos produits</div>
+                                    <div class="menu__shopping__section">Prix</div>
+                                </div>
+                                <div class="menu__shopping__item">
+                                    <div class="menu__shopping__pic"><img src="/thehiker/assets/images/shop/cart1.jpg"></div>
+                                    <div class="menu__shopping__title">Veste Patagonia Powder Bowl Jacket</div>
+                                    <div class="menu__shopping__price">129.<span>99</span>€</div>
+                                </div>
+                                <div class="menu__shopping__item">
+                                    <div class="menu__shopping__pic"><img src="/thehiker/assets/images/shop/cart2.jpg"></div>
+                                    <div class="menu__shopping__title">Sac de couchage Poler</div>
+                                    <div class="menu__shopping__price">99.<span>99</span>€</div>
+                                </div>
+                                <div class="menu__shopping__item">
+                                    <div class="menu__shopping__total">Total</div>
+                                    <div class="menu__shopping__total">229.<span>98</span>€</div>
+                                </div>
+                                <div class="menu__shopping__item">
+                                    <div class="align-right">
+                                        <a class="js-links menu__item" href="#" data-url="/cart.html" data-href="/cart.html" >Payer</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </header>
             </div>
 
@@ -26,16 +60,9 @@
             </div>
 
             <div class="small-loader">
-                <div class="small-loader__background">
+                <div class="small-loader__background" style="position:absolute; transform: translate(-50%,-50%); left:50%; top:50%;">
                     <!-- <div class="small-loader__icon"></div> -->
-
-                    <svg width="101px" height="67px" viewBox="-1 14 101 67" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                        <!-- Generator: Sketch 39.1 (31720) - http://www.bohemiancoding.com/sketch -->
-                        <desc>Created with Sketch.</desc>
-                        <defs></defs>
-                        <polygon id="mountain" stroke="#979797" stroke-width="4" fill="none" points="3.49546027 78.1155522 34.4362862 29.2984304 40.7350938 41.3192151 57.5476597 18.0234375 96 77.5868665"></polygon>
-                        <path id="lake" d="M41.6987303,59.7739253 C24.4985342,62.3266597 -5.16670212,58.4215382 2.30078132,51.6235352 C9.76826475,44.8255321 12.8056638,47.9814454 49.9999997,47.2226563 C51.3426603,47.1952651 52.6319496,47.1734707 53.8700716,47.1570666 C86.9303639,46.7190434 83.508667,50.1242651 85.5654294,53.4423819 C87.6992185,56.8847636 112.150878,52.2060547 99.9999997,56.6347647 C87.8491217,61.0634747 59.0314387,57.2015244 41.6987303,59.7739253 Z" id="Path-4" stroke="#979797" stroke-width="3" fill="none"></path>
-                    </svg>
+                    <img src="/thehiker/assets/images/loader--fat.gif">
                 </div>
             </div>
 
@@ -44,7 +71,7 @@
 
         <footer class="footer">
                 <div class="footer__container">
-                    <img src="http://www.matthieubessol.com/thehiker/assets/images/footer.jpg" class="footer__background">
+                    <img src="/thehiker/assets/images/footer.jpg" class="footer__background">
                     <div class="footer__filter"></div>
                     <div class="footer__newsletter">
                         <div class="newsletter__title">Newsletter</div>
@@ -104,11 +131,11 @@
         </footer>
 
         <div class="loader js-loader">
-            <img src="http://www.matthieubessol.com/thehiker/assets/images/loader_background.jpg" class="loader__background">
+            <img src="/thehiker/assets/images/loader_background.jpg" class="loader__background">
             <!-- <div class="loader__title">The Hiker</div> -->
             <div class="loader__path foot">
-                <img src="http://www.matthieubessol.com/thehiker/assets/images/left.png" class="foot__left">
-                <img src="http://www.matthieubessol.com/thehiker/assets/images/right.png" class="foot__right">
+                <img src="/thehiker/assets/images/left.png" class="foot__left">
+                <img src="/thehiker/assets/images/right.png" class="foot__right">
             </div>
         </div>
     <!-- </div> -->

@@ -56,8 +56,8 @@ var fugues = {
                 var newHeight = previousHeight*value;
                 diffHeight = newHeight - previousHeight - getOffset(document.getElementsByClassName('fugues__header')[0]).top;
                 value = previousHeight*value - previousHeight;
-                document.getElementsByClassName('fugues__wrapper')[0].style.transform = "translate3d(0,"+ (value/2 - 0.2*previousHeight) +"px,0)";
-                document.getElementsByClassName('fugues__wrapper')[0].style.marginBottom = value +"px";
+                // document.getElementsByClassName('fugues__wrapper')[0].style.transform = "translate3d(0,"+ -(value/2 - 0.2*previousHeight) +"px,0)";
+                // document.getElementsByClassName('fugues__wrapper')[0].style.marginBottom = value +"px";
             },1010);
         } else if(this.elmts.fuguesPage) {
             var previousHeight = this.elmts.fuguesPage.offsetHeight,

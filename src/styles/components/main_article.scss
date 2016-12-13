@@ -21,11 +21,12 @@
         transition: 5s;
         transform:scale(1);
         display: block;
+        height: 100%;
     }
 
     &:hover img {
-        transition: 8s;
-        transform:scale(1.2);
+        // transition: 8s;
+        // transform:scale(1.2);
     }
 
     &__content {
@@ -123,6 +124,10 @@
 
         svg {
             width: 150px;
+
+            @include mobile {
+                width: 80px;
+            }
         }
     }
 
@@ -189,17 +194,6 @@
         width: 100%;
     }
 
-    &__title {
-        font-family: 'Montserrat', sans-serif;
-        font-size: 40px;
-        margin-top: 5px;
-
-        @include mobile {
-            font-size: 20px;
-            margin-top: 0;
-        }
-    }
-
     &__quote {
         font-family: 'Cormorant', serif;
         font-size: 30px;
@@ -222,6 +216,10 @@
         span {
             color: black;
         }
+
+        @include mobile {
+            font-size: 14px;
+        }
     }
 
     &--small {
@@ -230,10 +228,25 @@
         }
         .article__title {
             font-size: 24px;
+
+            @include mobile {
+                font-size: 20px;
+            }
         }
 
         .article__date {
             margin-top:3px;
+        }
+    }
+
+    &__title {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 40px;
+        margin-top: 5px;
+
+        @include mobile {
+            font-size: 20px;
+            margin-top: 0;
         }
     }
 }
@@ -243,8 +256,8 @@
     position:relative;
 
     @include mobile{
-        width: calc(100% + 20px);
-        margin-left: -10px;
+        width: calc(100% + 40px);
+        margin-left: -20px;
     }
 
     &__cover {
@@ -346,6 +359,10 @@
 
         svg {
             width: 150px;
+
+            @include mobile {
+                width: 80px;
+            }
         }
     }
 
@@ -356,14 +373,14 @@
         margin-bottom:40px;
 
         @include mobile {
-            font-size: 16px;
+            font-size: 20px;
             overflow: hidden;
             text-overflow: ellipsis;
             display: -webkit-box;
             -webkit-box-orient: vertical;
-            -webkit-line-clamp: 6; /* number of lines to show */
-            line-height: 16px;        /* fallback */
-            max-height: 16*6px;
+            -webkit-line-clamp: 4; /* number of lines to show */
+            line-height: 1.5;        /* fallback */
+            max-height: 30*4px;
         }
     }
 

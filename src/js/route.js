@@ -72,19 +72,18 @@ var route = {
 
             imagesLoaded( document.querySelectorAll('#app'), function() {
                 document.getElementsByClassName("content")[0].classList.add('active');
-                setTimeout(function() {
-                    self.loadHighResPictures();
-                },500);
             });
 
             document.getElementsByClassName('content')[0].classList.remove('content--full');
             document.getElementsByClassName('menu')[0].classList.remove('menu--absolute');
+            document.getElementsByClassName('menu')[0].classList.remove('menu--absolute--black');
 
             self.resetBeforeLaunch(self);
             self.launchAbout();
             self.launchShop();
             self.launchFugues();
             self.launchSound();
+            self.launchGuide();
 
             if(document.getElementsByClassName('js-section')){
                 imagesLoaded( document.getElementById('app'), function() {
@@ -137,6 +136,7 @@ var route = {
                 self.launchShop(self);
                 self.launchFugues(self);
                 self.launchSound(self);
+                self.launchGuide(self);
             },2000);
         });
     },
@@ -182,6 +182,7 @@ var route = {
                 arrayImg[i].crossOrigin = "Anonymous";
                 arrayImg[i].number = i;
                 arrayImg[i].onload = function () {
+                    small[this.number].classList.add('hide');
                   arrayImg[this.number].classList.add('loaded');
                   placeholder[this.number].appendChild(arrayImg[this.number]);
                 };
@@ -195,11 +196,13 @@ var route = {
         }
         document.getElementsByClassName('content')[0].classList.remove('content--full');
         document.getElementsByClassName('menu')[0].classList.remove('menu--absolute');
+        document.getElementsByClassName('menu')[0].classList.remove('menu--absolute--black');
         imagesLoaded( document.querySelectorAll('#app'), function() {
             document.getElementById('app').classList.remove('fadeOut');
             document.getElementsByClassName("content")[0].classList.add('active');
             ctx.loadHighResPictures();
             setTimeout(function() {
+                // ctx.loadHighResPictures();
                 document.getElementsByClassName('js-loader')[0].style.display = "none";
             },1500);
         });
@@ -222,12 +225,25 @@ var route = {
                 self.elmts.smallLoader.classList.remove('active');
             });
         }
+
+        if(document.getElementsByClassName("product__header")[0])
+            document.getElementsByClassName('menu')[0].classList.add('menu--absolute');
+    },
+
+    launchGuide(self) {
+        if(document.getElementsByClassName('guide')[0]) {
+            document.getElementsByClassName('menu')[0].classList.add('menu--absolute');
+            imagesLoaded( document.getElementsByClassName('guide')[0], function() {
+                self.elmts.smallLoader.classList.remove('active');
+            });
+        }
     },
 
     launchAbout(self) {
         if(document.getElementById('about')) {
             document.getElementsByClassName('content')[0].classList.add('content--full');
             document.getElementsByClassName('menu')[0].classList.add('menu--absolute');
+            document.getElementsByClassName('menu')[0].classList.add('menu--absolute--black');
 
             var aboutEl = document.querySelectorAll('.about');
             imagesLoaded( aboutEl, function() {

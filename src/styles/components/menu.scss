@@ -1,10 +1,211 @@
 .menu {
     position:relative;
     padding: 20px 0;
+    margin-bottom: 20px;
     margin:0 auto;
     text-align: center;
     transition: 0.5s;
     z-index: 9999;
+
+    &__shop {
+        cursor: pointer;
+        width: 30px;
+        position: absolute;
+        height: 30px;
+        right: -100px;
+        display: block;
+        cursor: pointer;
+        top: 50%;
+        transform: translateY(-50%);
+
+        @include mobile {
+            top: -210%;
+            right: 30px;
+        }
+
+        .bulle {
+            z-index: 1;
+            display: block;
+            padding: 10px;
+            background: #6ed7ff;
+            position: absolute;
+            top: -5px;
+            right: -5px;
+            font-size: 12px;
+            border-radius: 10px;
+            color: white;
+
+            @include mobile {
+                color:black;
+            }
+            line-height: 0;
+            letter-spacing: 0;
+
+            &__content {
+                position:absolute;
+                left: 6px;
+            }
+        }
+
+    }
+
+    .align-right {
+        text-align:right;
+        width: 100%;
+        margin-top: 25px;
+    }
+
+    &__shopping {
+        &__item {
+            display: flex;
+            align-items:center;
+
+            .menu__item {
+                flex:none;
+                padding: 0px 5px;
+                color:white;
+
+                @include mobile {
+                    color:black;
+                }
+                &:after {
+                    opacity: 1;
+                }
+            }
+        }
+
+        &__section{
+            @extend %Montserrat;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+
+            &:first-child {
+                flex:4;
+                text-align: left;
+            }
+
+            &:last-child {
+                flex:1;
+                text-align: right;
+            }
+        }
+
+        &__pic {
+            flex:1;
+
+            img {
+                width: 100%;
+            }
+        }
+
+        &__title {
+            flex:3;
+            text-align: left;
+            padding-right: 20px;
+            font-size: 18px;
+            padding-left: 10px;
+            @extend %Cormorant;
+        }
+
+        &__price {
+            flex:1;
+            text-align: right;
+            @extend %Cormorant;
+            font-size: 18px;
+            span {
+                font-size: 10px;
+            }
+        }
+
+        &__total {
+            @extend %Montserrat;
+
+            &:first-child {
+                flex:4;
+                text-transform: uppercase;
+                text-align: right;
+                padding-right:20px;
+            }
+
+            &:last-child {
+                @extend %Cormorant;
+                flex:1;
+                text-align: right;
+                font-size: 20px;
+                font-weight: bold;
+            }
+        }
+    }
+
+
+    // &__input {
+        input[type="checkbox"] {
+            display: none;
+
+            & + label {
+
+            }
+
+            // .menu__shop .menu__shopping-cart:hover {
+            //     display: block;
+            //     opacity: 1;
+            //     transform:scaleY(1) translate(-50%, 0);
+            //     transition-delay: 0.4s;
+
+            //     .menu__shopping-cart__content {
+            //         opacity: 1;
+            //         transition:0s;
+            //         transition-delay: 0s;
+            //     }
+            // }
+        }
+    // }
+
+    &__shopping-cart {
+        opacity: 0;
+        width: 30px;
+        position: absolute;
+        right: -100px;
+        display: block;
+        width: 360px;
+        background:white;
+
+        @include mobile {
+            color:black;
+        }
+        border-radius: 4px;
+        box-sizing:border-box;
+        padding:15px 15px;
+        top: 58px;
+        left: 50%;
+        transform-origin:top;
+        transform:scaleY(0.5) translate(-50%, -40px);
+        box-shadow: 0px 3px 41px 0px rgba(0,0,0,0.3);
+        transition: 0.3s;
+        cursor: auto;
+        transition-delay: 0s;
+        pointer-events:none;
+
+        &__content {
+            transition:0.4s;
+            transition-delay: 1s;
+            opacity: 0;
+        }
+
+        &:after {
+            content: "";
+            display: block;
+            width: 40px;
+            height: 30px;
+            background-image: url('/thehiker/assets/images/svg/triangle.png');
+            position: absolute;
+            background-size: 40px 30px;
+            top: -30px;
+            z-index: 1;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    }
 
     &--absolute {
         // position: absolute;
@@ -13,14 +214,31 @@
         // left: 50%;
         // transform: translateX(-50%);
 
+        label img {
+            filter:invert(100%);
+        }
+
         .menu__title, .menu__item {
             color:white;
+
+            @include mobile {
+                color:black;
+            }
+        }
+
+        &--black {
+            label img {
+                filter: invert(0%);
+            }
+            .menu__title, .menu__item {
+                color: black;
+            }
         }
     }
 
     &__title {
         font-family: 'Cormorant', serif;
-        font-size: 64px;
+        font-size: 54px;
         text-decoration:none;
         color:black;
         transition: 0.8s;
@@ -28,16 +246,17 @@
 
 
         @include mobile {
-            font-size: 54px;
+            font-size: 44px;
         }
     }
 
     &__container {
-        width: 50%;
+        width: 40%;
         display: flex;
         flex-direction:row;
         margin: 0 auto;
-        margin-top: 30px;
+        margin-top: 10px;
+        position: relative;
 
         @include mobile {
             width: 100%;
@@ -50,7 +269,7 @@
     &__item {
         flex:1;
         font-family: 'Montserrat', sans-serif;
-        font-size: 24px;
+        font-size: 20px;
         text-transform: uppercase;
         color:black;
         text-decoration: none;
@@ -63,6 +282,10 @@
 
         &:hover {
             color:white;
+
+            @include mobile {
+                color:black;
+            }
         }
 
         &:hover:after {
@@ -91,8 +314,25 @@
 
 .menu--absolute + #app {
     margin-top: -170px !important;
+
+    @include mobile {
+        margin-top: 0 !important;
+    }
 }
 
 .menu--absolute + #app.no-background {
     transform: none !important;
+}
+
+.menu__shop:hover .menu__shopping-cart {
+    display: block;
+    opacity: 1;
+    transform:scaleY(1) translate(-50%, 0);
+    transition-delay: 0.4s;
+
+    .menu__shopping-cart__content {
+        opacity: 1;
+        transition:0.4s;
+        transition-delay: 0.4s;
+    }
 }

@@ -12,8 +12,8 @@
 
 @mixin fullPicture {
     @include mobile {
-        width: calc(100% + 20px);
-        margin-left: -10px;
+        width: calc(100% + 40px);
+        margin-left: -20px;
     }
 }
 
@@ -83,6 +83,7 @@
             transition: 3s;
 
             @include mobile {
+                opacity: 1;
                 font-size: 42px !important;
                 line-height: 50px !important;
             }
@@ -92,7 +93,8 @@
                 transform: translateX(-100px);
 
                 @include mobile {
-                    margin-left: -90px;
+                    margin-left: 40px;
+                    opacity: 1;
                 }
             }
 
@@ -101,7 +103,8 @@
                 transform: translateX(100px);
 
                 @include mobile {
-                    margin-left: 50px;
+                    margin-left: 0px;
+                    transform: translateX(40px);
                 }
             }
         }
@@ -122,7 +125,7 @@
 
         @include mobile {
             font-size: 25px;
-            width: 85%;
+            width: 100%;
         }
     }
 
@@ -202,15 +205,23 @@
     }
     .about__text {
         line-height: 38px;
+
+        @include mobile {
+            line-height:1.5;
+        }
     }
 }
 
+.about__big-image {
+    margin: 30px 0 0;
+}
+
 .block-7 {
-    margin: 100px 0;
+    margin: 100px 0 0;
     position: relative;
 
     @include mobile {
-        margin: 50px 0;
+        margin: 0px 0;
     }
 
     .about__big-image__title {

@@ -33,7 +33,7 @@ var about = {
         document.getElementsByClassName('about__header')[0].classList.add("active");
         document.getElementsByClassName('about__header')[0].style.transform = "scale("+value+")";
         document.getElementsByClassName('js-scale')[0].style.transform = "scale("+value+")";
-        this.elmts.scaleBlock.style.margin = (previousHeightScale*value - previousHeightScale)/1.5 +"px 0 "+(previousHeightScale*value - previousHeightScale)/3+"px 0";
+        // this.elmts.scaleBlock.style.margin = (previousHeightScale*value - previousHeightScale)/1.5 +"px 0 "+(previousHeightScale*value - previousHeightScale)/3+"px 0";
         total += (previousHeightScale*value - previousHeightScale)/3;
         value = previousHeight*value - previousHeight;
         total+=value/2;

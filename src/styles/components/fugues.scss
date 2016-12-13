@@ -17,8 +17,14 @@
     }
 
     &__wrapper {
-        height: calc(100vh - 170px);
+        height: calc(100vh - 80px);
         position:relative;
+        transition: 1s;
+    }
+
+    &__header + .fugues__wrapper {
+        height: auto;
+        margin-top: 30px;
     }
 
     &__svg {
@@ -40,6 +46,8 @@
     &__item {
         position: absolute;
         transition: 0.5s;
+        // max-height: 48%;
+        // overflow-y: hidden;
 
         &:after {
             transition: 0.5s;
@@ -148,6 +156,11 @@
         &:after {
             height: 88%;
             width: 85%;
+
+            @include mobile{
+                width: 90%;
+                height: 75%;
+            }
         }
 
         &:hover:after {
@@ -156,23 +169,33 @@
     }
 
     .forets {
-        right: 10%;
+        right: 15%;
         width: 20%;
-        bottom: 3%;
+        bottom: 6%;
 
         .fugues__text {
-            bottom: 20px;
-            left: 20px;
+            top: 30px;
+            left: 30px;
+        }
+
+        &:after {
+            width: 86%;
+            height: 88%;
+
+            @include mobile {
+                width: 90%;
+                height: 75%;
+            }
         }
 
         &:hover:after {
-            transform:translate(calc(-50% + 40px),calc(-50% + 40px));
+            transform:translate(calc(-50% - 40px),calc(-50% - 40px));
         }
     }
 
     &__header {
         position:relative;
-        transition: 0.5s;
+        transition: 1s;
         transform:scale(1);
 
         @include mobile {
@@ -181,7 +204,7 @@
             .placeholder {
                 height: 100%;
 
-                img {
+                img:not(.img-small) {
                     height: 100%;
                     width: auto;
                     left: 50%;
@@ -203,6 +226,16 @@
         }
 
         &--montagnes {
+
+            .fugues__svg {
+                left: 50%;
+                z-index: 10;
+                top:auto;
+                transform: translate(-50%, 10%) scale(1.1);
+                bottom: 0;
+                height: 60%;
+            }
+
             &:after {
                 background: rgba(87,189,225,.4);
             }
@@ -229,12 +262,15 @@
 
             .fugues__svg {
                 height: 190px;
+                bottom: 0;
+                top: auto;
+                transform: translate(-50%,-39%) scale(1.8);
             }
         }
 
         &--deserts {
             &:after {
-                background: rgba(255, 193, 7, 0.5);
+                background: rgba(255, 193, 7, 0.3);
             }
 
             .fugues__svg {
@@ -316,6 +352,11 @@ span.title-down {
             left: 50%;
             top: 50%;
             transform:translate(-50%,-50%);
+
+            @include mobile {
+                height: 100%;
+                width: auto;
+            }
         }
     }
 }
