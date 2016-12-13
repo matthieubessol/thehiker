@@ -19,7 +19,7 @@
         transform: translateY(-50%);
 
         @include mobile {
-            top: -210%;
+            top: -196%;
             right: 30px;
         }
 
@@ -277,7 +277,7 @@
         transition: 0.3s;
 
         @include mobile {
-            font-size: 16px;
+            font-size: 15px;
         }
 
         &:hover {
