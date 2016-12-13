@@ -3,6 +3,8 @@
     // position: fixed;
     bottom: 0;
     overflow: hidden;
+    position: relative;
+    z-index: 111111111111111;
 
     &__background {
         width:100%;

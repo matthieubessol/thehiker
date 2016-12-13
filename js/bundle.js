@@ -582,6 +582,10 @@
 	                this.loadJs();
 	                pathFile = "/thehiker/fugues/iceland/index.html";
 	                break;
+	            case BASE_URL+"/fugues/amazonie/":
+	                this.loadJs();
+	                pathFile = "/thehiker/fugues/amazonie/index.html";
+	                break;
 	            case BASE_URL+"/fugues/mountains/":
 	                pathFile = "/thehiker/fugues/mountains/index.html";
 	                break;
