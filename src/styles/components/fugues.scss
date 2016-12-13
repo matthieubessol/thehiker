@@ -20,6 +20,10 @@
         height: calc(100vh - 80px);
         position:relative;
         transition: 1s;
+
+        @include mobile {
+            height: auto;
+        }
     }
 
     &__header + .fugues__wrapper {
@@ -279,6 +283,10 @@
 
             .fugues__svg {
                 height: 180px;
+
+                @include mobile{
+                    height: 150px;
+                }
             }
         }
     }

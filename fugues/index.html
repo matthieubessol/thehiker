@@ -5,19 +5,53 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <style type="text/css"></style>
     <link rel="stylesheet" type="text/css" href="https://necolas.github.io/normalize.css/latest/normalize.css">
-    <title>Fugues</title>
+    <link rel="stylesheet" type="text/css" href="/thehiker/src/styles/style.css">
+    <title>Document</title>
 </head>
 <body>
     <!-- <div class="site-wrapper"> -->
         <div class="content">
-            <div class="menu row">
-                <a class="js-links menu__title" data-url="/" href="/home.html">The Hiker</a>
+            <div class="menu">
+                <a class="js-links menu__title" href="#" data-url="" data-href="/home.html">The Hiker</a>
                 <header class="menu__container">
-                    <!-- <a class="js-links" data-url="/" href="/index.html"  >Home</a> -->
-                    <a class="js-links menu__item" data-url="/fugues/" data-href="./fugues/index.html">Fugues</a>
-                    <a class="js-links menu__item" data-url="/fugues/" data-href="./fugues/index.html">Guide</a>
-                    <a class="js-links menu__item" data-url="/shop/" data-href="./shop/index.html"  >Shop</a>
-                    <a class="js-links menu__item" data-url="/about" data-href="./about.html" >À propos</a>
+                    <!-- <a class="js-links" data-url="" href="/index.html"  >Home</a> -->
+                    <a class="js-links menu__item" href="#" data-url="fugues/" data-href="/fugues/index.html">Fugues</a>
+                    <a class="js-links menu__item" href="#" data-url="guide.html" data-href="/guide.html">Guide</a>
+                    <a class="js-links menu__item" href="#" data-url="shop/" data-href="/shop/index.html"  >Shop</a>
+                    <a class="js-links menu__item" href="#" data-url="about.html" data-href="/about.html" >À propos</a>
+
+                    <div class="menu__shop">
+                        <div class="bulle"><div class="bulle__content">2</div></div>
+                        <input class="menu__input" type="checkbox" id="checkboxmenu">
+                        <label for="checkboxmenu"><img src="/thehiker/assets/images/svg/shopping-cart.svg"></span></label>
+                        <div class="menu__shopping-cart">
+                            <div class="menu__shopping-cart__content">
+                                <div class="menu__shopping__item">
+                                    <div class="menu__shopping__section">Vos produits</div>
+                                    <div class="menu__shopping__section">Prix</div>
+                                </div>
+                                <div class="menu__shopping__item">
+                                    <div class="menu__shopping__pic"><img src="/thehiker/assets/images/shop/cart1.jpg"></div>
+                                    <div class="menu__shopping__title">Veste Patagonia Powder Bowl Jacket</div>
+                                    <div class="menu__shopping__price">129.<span>99</span>€</div>
+                                </div>
+                                <div class="menu__shopping__item">
+                                    <div class="menu__shopping__pic"><img src="/thehiker/assets/images/shop/cart2.jpg"></div>
+                                    <div class="menu__shopping__title">Sac de couchage Poler</div>
+                                    <div class="menu__shopping__price">99.<span>99</span>€</div>
+                                </div>
+                                <div class="menu__shopping__item">
+                                    <div class="menu__shopping__total">Total</div>
+                                    <div class="menu__shopping__total">229.<span>98</span>€</div>
+                                </div>
+                                <div class="menu__shopping__item">
+                                    <div class="align-right">
+                                        <a class="js-links menu__item" href="#" data-url="cart.html" data-href="/cart.html" >Payer</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </header>
             </div>
             <!-- Main content -->
@@ -25,7 +59,7 @@
                 <div id="fugues" class="cc fugues">
                     <div class="fugues__wrapper">
                         <div class="fugues__list">
-                            <a class="js-links fugues__item mountain" data-url="/fugues/mountains/" data-svg="mountain" data-href="/fugues/mountains/index.html">
+                            <a class="js-links fugues__item mountain" data-url="fugues/mountains/" data-svg="mountain" data-href="/fugues/mountains/index.html">
                                 <div class="placeholder" data-large="http://www.matthieubessol.com/thehiker/assets/images/canada/canada9.JPG">
                                     <img src="http://www.matthieubessol.com/thehiker/assets/images/canada/canada9--small.jpg" class="img-small">
                                     <div style="padding-bottom: 66.7%;"></div>
@@ -33,7 +67,7 @@
                                 <p class="fugues__text">Montagnes</p>
                             </a>
 
-                            <a class="js-links fugues__item forets"  data-url="/fugues/forets/" data-svg="desert" data-href="/fugues/forets/index.html">
+                            <a class="js-links fugues__item forets"  data-url="fugues/forets/" data-svg="desert" data-href="/fugues/forets/index.html">
                                 <div class="placeholder" data-large="http://www.matthieubessol.com/thehiker/assets/images/forets/1.jpg">
                                     <img src="http://www.matthieubessol.com/thehiker/assets/images/forets/1.jpg" class="img-small">
                                     <div style="padding-bottom: 136.5%;"></div>
@@ -41,7 +75,7 @@
                                 <p class="fugues__text">Forets</p>
                             </a>
 
-                            <a class="js-links fugues__item eau"  data-url="/fugues/eau/" data-svg="desert" data-href="/fugues/eau/index.html">
+                            <a class="js-links fugues__item eau"  data-url="fugues/eau/" data-svg="desert" data-href="/fugues/eau/index.html">
                                 <div class="placeholder" data-large="http://www.matthieubessol.com/thehiker/assets/images/cotes/1.jpg">
                                     <img src="http://www.matthieubessol.com/thehiker/assets/images/cotes/1.jpg" class="img-small">
                                     <div style="padding-bottom: 133.5%;"></div>
@@ -49,7 +83,7 @@
                                 <p class="fugues__text">Côtes</p>
                             </a>
 
-                            <a class="js-links fugues__item desert"  data-url="/fugues/deserts/" data-svg="desert" data-href="/fugues/deserts/index.html">
+                            <a class="js-links fugues__item desert"  data-url="fugues/deserts/" data-svg="desert" data-href="/fugues/deserts/index.html">
                                 <div class="placeholder" data-large="http://www.matthieubessol.com/thehiker/assets/images/deserts/1.jpg">
                                     <img src="http://www.matthieubessol.com/thehiker/assets/images/deserts/1.jpg" class="img-small">
                                     <div style="padding-bottom: 74.5%;"></div>
@@ -76,56 +110,94 @@
                     </div>
                 </div>
             </div>
-        </div>
-        <footer class="footer">
-            <div class="footer__container">
-                <img src="http://www.matthieubessol.com/thehiker/assets/images/footer.jpg" class="footer__background">
-                <div class="footer__filter"></div>
-                <div class="footer__newsletter">
-                    <div class="newsletter__title">Newsletter</div>
-                    <div class="newsletter__container">
-                        <input class="newsletter__input" placeholder="Your mail"></input>
-                        <input type="submit" name="send" class="newsletter__submit">
-                    </div>
-                </div>
-                <div class="newsletter__content">
-                    <div class="newsletter__left">
-                        <div class="newsletter__content__title">The Hiker</div>
-                        <div class="newsletter__content__baseline">sortez des sentiers battus</div>
-                    </div>
-                    <div class="newsletter__right">
-                        <div class="list">
-                            <div class="list__container">
-                                <div class="list__item">fugues</div>
-                                <div class="list__item">guide</div>
-                                <div class="list__item">shop</div>
-                            </div>
-                            <div class="list__container">
-                                <div class="list__item">à propos</div>
-                                <div class="list__item">facebook</div>
-                                <div class="list__item">twitter</div>
-                            </div>
+                    <div class="scriptWrapper"></div>
+
+                    <div class="small-loader">
+                        <div class="small-loader__background" style="position:absolute; transform: translate(-50%,-50%); left:50%; top:50%;">
+                            <!-- <div class="small-loader__icon"></div> -->
+                            <img src="/thehiker/assets/images/loader--fat.gif">
                         </div>
                     </div>
+
+                    <div id="gridpak"><div class="gridpak_grid gridpak_grid_0"><div class="gridpak_col"><div class="gridpak_visible"></div></div> <!-- // .gridpak_col --><div class="gridpak_col"><div class="gridpak_visible"></div></div> <!-- // .gridpak_col --></div><!-- // .gridpak_grid --><div class="gridpak_grid gridpak_grid_1"><div class="gridpak_col"><div class="gridpak_visible"></div></div> <!-- // .gridpak_col --><div class="gridpak_col"><div class="gridpak_visible"></div></div> <!-- // .gridpak_col --><div class="gridpak_col"><div class="gridpak_visible"></div></div> <!-- // .gridpak_col --><div class="gridpak_col"><div class="gridpak_visible"></div></div> <!-- // .gridpak_col --><div class="gridpak_col"><div class="gridpak_visible"></div></div> <!-- // .gridpak_col --><div class="gridpak_col"><div class="gridpak_visible"></div></div> <!-- // .gridpak_col --></div><!-- // .gridpak_grid --><div class="gridpak_grid gridpak_grid_2"><div class="gridpak_col"><div class="gridpak_visible"></div></div> <!-- // .gridpak_col --><div class="gridpak_col"><div class="gridpak_visible"></div></div> <!-- // .gridpak_col --><div class="gridpak_col"><div class="gridpak_visible"></div></div> <!-- // .gridpak_col --><div class="gridpak_col"><div class="gridpak_visible"></div></div> <!-- // .gridpak_col --><div class="gridpak_col"><div class="gridpak_visible"></div></div> <!-- // .gridpak_col --><div class="gridpak_col"><div class="gridpak_visible"></div></div> <!-- // .gridpak_col --><div class="gridpak_col"><div class="gridpak_visible"></div></div> <!-- // .gridpak_col --><div class="gridpak_col"><div class="gridpak_visible"></div></div> <!-- // .gridpak_col --><div class="gridpak_col"><div class="gridpak_visible"></div></div> <!-- // .gridpak_col --><div class="gridpak_col"><div class="gridpak_visible"></div></div> <!-- // .gridpak_col --><div class="gridpak_col"><div class="gridpak_visible"></div></div> <!-- // .gridpak_col --><div class="gridpak_col"><div class="gridpak_visible"></div></div> <!-- // .gridpak_col --></div><!-- // .gridpak_grid --></div>
                 </div>
-            </div>
-        </footer>
 
-        <div class="loader js-loader">
-            <img src="http://www.matthieubessol.com/thehiker/assets/images/loader_background.jpg" class="loader__background">
-            <div class="loader__title">The Hiker</div>
-            <div class="loader__path foot">
-                <img src="http://www.matthieubessol.com/thehiker/assets/images/left.png" class="foot__left">
-                <img src="http://www.matthieubessol.com/thehiker/assets/images/right.png" class="foot__right">
-            </div>
-        </div>
-        <!-- </div> -->
+                <footer class="footer">
+                        <div class="footer__container">
+                            <img src="/thehiker/assets/images/footer.jpg" class="footer__background">
+                            <div class="footer__filter"></div>
+                            <div class="footer__newsletter">
+                                <div class="newsletter__title">Newsletter</div>
+                                <div class="newsletter__container">
+                                    <input class="newsletter__input" placeholder="Your mail"></input>
+                                    <button type="submit" class="newsletter__submit">
+                                        <svg width="104px" height="72px" viewBox="70 235 104 72" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                        <!-- Generator: Sketch 39.1 (31720) - http://www.bohemiancoding.com/sketch -->
+                                        <desc>Created with Sketch.</desc>
+                                        <defs>
+                                            <polygon id="path-1" points="103.791 61.9997962 103.791 0.4949 2.71050543e-20 0.4949 0 61.9997962 103.791 61.9997962"></polygon>
+                                            <polygon id="path-3" points="99.5235 0.823 0.2955 0.823 0.2955 43.5416 99.5235 43.5416"></polygon>
+                                        </defs>
+                                        <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(70.000000, 235.000000)">
+                                            <g id="Group-3" transform="translate(0.000000, 9.177300)">
+                                                <mask id="mask-2" fill="white">
+                                                    <use xlink:href="#path-1"></use>
+                                                </mask>
+                                                <g id="Clip-2"></g>
+                                                <path d="M0.0535,0.4949 C17.4655,15.0009 34.6485,29.3149 51.9075,43.6929 C69.1405,29.3369 86.3405,15.0089 103.7155,0.5339 C103.7495,1.1579 103.7885,1.5349 103.7885,1.9119 C103.7915,19.7179 103.7935,37.5249 103.7875,55.3309 C103.7865,58.8119 101.9775,61.2299 98.9015,61.8759 C98.4015,61.9799 97.8755,61.9949 97.3625,61.9949 C67.0755,61.9999 36.7875,62.0019 6.5005,61.9969 C2.6335,61.9969 0.0125,59.4439 0.0095,55.6119 C-0.0065,37.6069 0.0015,19.6019 0.0035,1.5959 C0.0035,1.3289 0.0265,1.0619 0.0535,0.4949" id="Fill-1" fill="#000000" mask="url(#mask-2)"></path>
+                                            </g>
+                                            <g id="Group-6" transform="translate(2.000000, 0.177300)">
+                                                <mask id="mask-4" fill="white">
+                                                    <use xlink:href="#path-3"></use>
+                                                </mask>
+                                                <g id="Clip-5"></g>
+                                                <path d="M49.9065,43.5416 C33.2945,29.7016 16.8145,15.9716 0.2955,2.2096 C1.5715,1.1486 2.9505,0.8236 4.4745,0.8256 C16.0005,0.8386 27.5265,0.8286 39.0525,0.8286 C57.7735,0.8286 76.4935,0.8376 95.2135,0.8226 C96.7755,0.8216 98.2005,1.1086 99.5235,2.2076 C82.9805,15.9886 66.4775,29.7366 49.9065,43.5416" id="Fill-4" fill="#000000" mask="url(#mask-4)"></path>
+                                            </g>
+                                        </g>
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="newsletter__content">
+                                <div class="newsletter__left">
+                                    <div class="newsletter__content__title">The Hiker</div>
+                                    <div class="newsletter__content__baseline">sortez des sentiers battus</div>
+                                </div>
+                                <div class="newsletter__right">
+                                    <div class="list">
+                                        <div class="list__container">
+                                            <div class="list__item">fugues</div>
+                                            <div class="list__item">guide</div>
+                                            <div class="list__item">shop</div>
+                                        </div>
+                                        <div class="list__container">
+                                            <div class="list__item">à propos</div>
+                                            <div class="list__item">facebook</div>
+                                            <div class="list__item">twitter</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
 
-        <!-- Load scripts. -->
-        <script src="https://unpkg.com/isotope-layout@3.0/dist/isotope.pkgd.min.js"></script>
-        <script src="https://npmcdn.com/imagesloaded@4.1/imagesloaded.pkgd.min.js"></script>
-        <script src="/js/howler.min.js"></script>
-        <script src="/js/color.js"></script>
-        <script type="text/javascript" src="/js/bundle.js" charset="utf-8"></script>
-    </body>
-    </html>
+
+                </footer>
+
+                <div class="loader js-loader">
+                    <img src="/thehiker/assets/images/loader_background.jpg" class="loader__background">
+                    <!-- <div class="loader__title">The Hiker</div> -->
+                    <div class="loader__path foot">
+                        <img src="/thehiker/assets/images/left.png" class="foot__left">
+                        <img src="/thehiker/assets/images/right.png" class="foot__right">
+                    </div>
+                </div>
+            <!-- </div> -->
+
+            <!-- Load scripts. -->
+            <script src="https://unpkg.com/isotope-layout@3.0/dist/isotope.pkgd.min.js"></script>
+            <script src="https://npmcdn.com/imagesloaded@4.1/imagesloaded.pkgd.min.js"></script>
+            <script src="/thehiker/js/howler.min.js"></script>
+            <script src="/thehiker/js/color.js"></script>
+            <script type="text/javascript" src="/thehiker/js/bundle.js" charset="utf-8"></script>
+        </body>
+        </html>

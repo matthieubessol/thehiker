@@ -1,3 +1,4 @@
+// require("babel-polyfill");
 var animation = require('./animation.js');
 var shop      = require('./shop.js');
 var about     = require('./about.js');
@@ -5,8 +6,8 @@ var fugues    = require('./fugues.js');
 var sound     = require('./sound.js');
 
 // var BASE_URL = "http://localhost:8888/thehiker/";
-var BASE_URL = "http://localhost:8888/thehiker/";
-// var BASE_URL = "http://www.matthieubessol.com/thehiker/";
+// var BASE_URL = "http://localhost:8888/thehiker";
+var BASE_URL = "http://www.matthieubessol.com/thehiker/";
 
 var route = {
     elmts: {},
@@ -34,25 +35,38 @@ var route = {
         var url = window.location.href;
         document.getElementById('app').classList.remove('no-background');
         document.getElementsByClassName('content')[0].classList.remove('no-background');
+        console.log(url);
         switch (url) {
             case BASE_URL+"/shop/":
-                pathFile = "/shop/index.html";
+                pathFile = "/thehiker/shop/index.html";
                 break;
             case BASE_URL+"/about.html":
-                pathFile = "/about.html";
+                pathFile = "/thehiker/about.html";
+                break;
+            case BASE_URL + "/guide.html":
+                pathFile = "/thehiker/guide.html";
                 break;
             case BASE_URL+"/fugues/":
-                pathFile = "/fugues/index.html";
+                pathFile = "/thehiker/fugues/index.html";
                 break;
             case BASE_URL+"/fugues/iceland/":
                 this.loadJs();
-                pathFile = "/fugues/iceland/index.html";
+                pathFile = "/thehiker/fugues/iceland/index.html";
                 break;
             case BASE_URL+"/fugues/mountains/":
-                pathFile = "/fugues/mountains/index.html";
+                pathFile = "/thehiker/fugues/mountains/index.html";
+                break;
+            case BASE_URL+"/fugues/deserts/":
+                pathFile = "/thehiker/fugues/deserts/index.html";
+                break;
+            case BASE_URL+"/fugues/eau/":
+                pathFile = "/thehiker/fugues/eau/index.html";
+                break;
+            case BASE_URL+"/fugues/forets/":
+                pathFile = "/thehiker/fugues/forets/index.html";
                 break;
             case BASE_URL+"/shop/products/shoe.html":
-                pathFile = "/shop/products/shoe.html";
+                pathFile = "/thehiker/shop/products/shoe.html";
                 break;
             default:
                 break;
@@ -150,14 +164,18 @@ var route = {
     },
 
     loadJs() {
-        if(this.script) return;
+        if(this.script && document.getElementsByClassName('fugues-page')[0]) {
+            document.getElementsByClassName('scriptWrapper')[0].innerHTML="";
+        }
+
         this.script = true;
         script = document.createElement('script');
         script.src = BASE_URL+"/js/app.js";
+        document.getElementsByClassName('scriptWrapper')[0].appendChild(script);
         script.onload = function () {
             //console.log("load js");
         };
-        document.getElementById('app').appendChild(script);
+        // document.getElementById('app').appendChild(script);
     },
 
     loadHighResPictures() {
