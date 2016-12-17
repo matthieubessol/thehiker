@@ -23,6 +23,7 @@ body {
         z-index: 8000000000000;
         position: relative;
         background:white;
+        margin-bottom: 20px;
 
         &--full {
             // max-width: 100%;
@@ -427,4 +428,12 @@ header {
 
 .hide {
     display: none !important;
+}
+
+.relative {
+    // position: relative;
+}
+
+.home-about img {
+    width: 100%;
 }

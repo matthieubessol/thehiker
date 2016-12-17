@@ -18,6 +18,9 @@
 
     &__wrapper {
         height: calc(100vh - 80px);
+        max-width: 1200px;
+        width:100%;
+        margin: 0 auto;
         position:relative;
         transition: 1s;
 
