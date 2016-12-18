@@ -535,8 +535,8 @@
 	var sound     = __webpack_require__(8);
 
 	// var BASE_URL = "http://localhost:8888/thehiker/";
-	// var BASE_URL = "http://localhost:8888/thehiker";
-	var BASE_URL = "http://www.matthieubessol.com/thehiker";
+	var BASE_URL = "http://localhost:8888/thehiker";
+	// var BASE_URL = "http://www.matthieubessol.com/thehiker";
 
 	var route = {
 	    elmts: {},

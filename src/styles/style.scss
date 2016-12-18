@@ -437,3 +437,14 @@ header {
 .home-about img {
     width: 100%;
 }
+
+.button--filter {
+    background: none;
+    border: 0px;
+    width: 70px;
+    display: inline-block;
+
+    img {
+        width: 100%;
+    }
+}

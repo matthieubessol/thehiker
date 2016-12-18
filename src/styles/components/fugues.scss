@@ -411,16 +411,17 @@ span.title-down {
         @extend %Cormorant;
         position: absolute;
         left: 50%;
-        width: 90%;
         text-align:center;
         top: 50%;
         transform:translate(-50%,-50%);
         font-size: 48px;
         color: #FFFFFF;
         letter-spacing: 0px;
+        width: 70%;
 
         @include mobile {
             font-size: 38px;
+            width: 90%;
         }
     }
 
@@ -451,4 +452,9 @@ span.title-down {
         -webkit-clip-path: polygon(108px 57px,130px 28px,179px 111px,4px 114px,68px 1px);
         clip-path: url("#clipPolygon");
     }
+}
+
+
+.js-gallery-content img {
+    width:100%;
 }
