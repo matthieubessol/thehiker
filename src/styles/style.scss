@@ -71,7 +71,8 @@ body {
         display:block;
         position:absolute;
         height:100%;
-        width: 100%;
+        width: auto;
+
         left: 50%;
         top:50%;
         transform: translateX(-50%) translateY(-50%);
@@ -447,4 +448,17 @@ header {
     img {
         width: 100%;
     }
+}
+
+
+.js-links {
+    cursor: pointer;
+
+    @include mobile {
+        width: 100%;
+    }
+}
+
+.article {
+    cursor: pointer;
 }
