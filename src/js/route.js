@@ -6,7 +6,7 @@ var fugues    = require('./fugues.js');
 var sound     = require('./sound.js');
 
 // var BASE_URL = "http://localhost:8888/thehiker/";
-// var BASE_URL = "http://localhost:8888/thehiker";
+ //var BASE_URL = "http://localhost:8888/thehiker";
 var BASE_URL = "http://www.matthieubessol.com/thehiker";
 
 var route = {
@@ -56,6 +56,10 @@ var route = {
             case BASE_URL+"/fugues/amazonie/":
                 this.loadJs();
                 pathFile = "/thehiker/fugues/amazonie/index.html";
+                break;
+            case BASE_URL+"/fugues/nepal/":
+                this.loadJs();
+                pathFile = "/thehiker/fugues/nepal/index.html";
                 break;
             case BASE_URL+"/fugues/mountains/":
                 pathFile = "/thehiker/fugues/mountains/index.html";
